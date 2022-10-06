@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PlayedHomeMatchesCount__c</fullName>
+    <description>Define number of games with scores that team played at home</description>
+    <externalId>false</externalId>
+    <label>Played Home Matches Count</label>
+    <summaryFilterItems>
+        <field>Match__c.Winner__c</field>
+        <operation>equals</operation>
+        <value>Home team</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Match__c.HomeTeam__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

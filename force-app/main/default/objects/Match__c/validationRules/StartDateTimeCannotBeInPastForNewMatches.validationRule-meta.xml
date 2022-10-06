@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StartDateTimeCannotBeInPastForNewMatches</fullName>
+    <active>true</active>
+    <description>StartDateTime__c cannot be in past for new Matches</description>
+    <errorConditionFormula>AND (
+				ISNEW() ,
+				StartDateTime__c  &lt;=  NOW()
+
+)</errorConditionFormula>
+    <errorDisplayField>StartDateTime__c</errorDisplayField>
+    <errorMessage>You can&apos;t enter the StartDateTime__c in past for new Matches</errorMessage>
+</ValidationRule>
